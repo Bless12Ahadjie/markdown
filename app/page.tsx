@@ -1,14 +1,11 @@
-import Sidenav from './shared/components/Sidenav'
-import DeleteButton from './shared/layouts/DeleteButton'
-import Header from './shared/layouts/Header'
+
+import Applayout from './shared/layouts/Applayout'
 
 
 export default function Home() {
   return (
   <main>
-    <Header></Header>
-    <Sidenav></Sidenav>
-    {/* <DeleteButton></DeleteButton> */}
+   <Applayout></Applayout>
   </main>
   )
 }

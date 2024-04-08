@@ -1,17 +1,22 @@
-import Image from "next/image";
+'use client'
+
 import Button from "../components/Button";
 import Logo from "../components/Logo";
 import DocumentName from "../components/DocumentName";
 import DeleteBtn from "../components/DeleteBtn";
 import Toggle from "../components/Toggle";
+import store from '../../core/libraries/sidenavStore';
+import { observer } from 'mobx-react';
 
-export default function Header (){
-
+const Header = observer(() => {
+    const toggleSidebar = () => {
+        store.toggleSidebar();
+      };
     
 
 
     return(
-        <main>
+        <main className={`w-full absolute ${store.isSidebarOpen? 'right-[-250px]':'right-[0px]'}`}>
             <div className="flex h-72 bg-black-400 justify-between pr-6 items-center cursor">
                 <div className="flex gap-25">
                     <Toggle></Toggle>
@@ -34,4 +39,6 @@ export default function Header (){
             </div>
         </main>
     )
-}
+});
+
+export default Header;
