@@ -15,7 +15,7 @@ export default function DocumentName (){
                             />
                             <div>
                                 <p className=" text-black-100 text-xxsm">Document Name</p>
-                                <input id="text" value={defaultname} className="bg-black-400 text-white text-xsm border-solid forced-color-adjust-none active:border-collapse focus: border-b-2  accent-black-400"  type="text"  />
+                                <input id="text" value={defaultname} className=" border-b-transparent bg-transparent bg-black-400 text-white text-sm  accent-black-400 focus:border-b focus:outline-none"  type="text"  />
                             </div>
                         </div>
         </main>

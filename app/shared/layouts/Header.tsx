@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Logo from "../components/Logo";
 import DocumentName from "../components/DocumentName";
 import DeleteBtn from "../components/DeleteBtn";
+import Toggle from "../components/Toggle";
 
 export default function Header (){
 
@@ -13,16 +14,7 @@ export default function Header (){
         <main>
             <div className="flex h-72 bg-black-400 justify-between pr-6 items-center cursor">
                 <div className="flex gap-25">
-                    <button className="bg-black-300 h-72 w-72 flex justify-center items-center">
-                        <Image  className="w-30 h-18"
-                        src={'./icon-menu.svg'}
-                        alt="close icon"
-                        width={60}
-                        height={40}
-                        
-                        />
-
-                    </button>
+                    <Toggle></Toggle>
 
                     <div className='flex justify-start items-center gap-6'>
                         <Logo></Logo>
