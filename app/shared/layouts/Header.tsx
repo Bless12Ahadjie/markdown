@@ -6,6 +6,7 @@ import DocumentName from "../components/DocumentName";
 import DeleteBtn from "../components/DeleteBtn";
 import Toggle from "../components/Toggle";
 import store from '../../core/libraries/sidenavStore';
+import documentStore from '../../core/libraries/addDocumentStore';
 import { observer } from 'mobx-react';
 
 const Header = observer(() => {
@@ -25,7 +26,7 @@ const Header = observer(() => {
                         <Logo></Logo>
    
                         <div className='h-12 w-0.1 bg-black-200'></div>
-                        <DocumentName></DocumentName>
+                        <DocumentName getCurrentDocumentName={documentStore.getCurrentDocumentName}  updateDocumentName={documentStore.updateDocumentName} ></DocumentName>
 
                     </div>
 

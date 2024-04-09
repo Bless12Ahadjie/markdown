@@ -1,3 +1,4 @@
+
 import Header from "./Header"
 import Sidenav from "./Sidenav"
 
@@ -12,6 +13,7 @@ return(
             <Header></Header>
 
             </div>
+            {/* <NightMode></NightMode> */}
            
         </div>
 
