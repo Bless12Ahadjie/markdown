@@ -8,3 +8,9 @@ export type btns = {
     alt?: string;
     
 }
+export interface Document {
+    id: number;
+    createdAt: string;
+    name: string;
+    content: string;
+  }
