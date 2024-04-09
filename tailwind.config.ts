@@ -19,7 +19,8 @@ const config: Config = {
       'gray-200':'#F5F5F5',
       'white':'#ffffff',
       'orange-600':'#E46643',
-      'orange-400':'#F39765'
+      'orange-400':'#F39765',
+      'gray': '#B4B4B4'
     }
     ,
     fontSize: {
