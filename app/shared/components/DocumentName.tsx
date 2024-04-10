@@ -8,8 +8,6 @@ import { useState, useEffect } from "react";
   const DocumentName = observer(({ getCurrentDocumentName, updateDocumentName}: { getCurrentDocumentName:string,  updateDocumentName: (newName: string) => void }) => {
  
     const [documentName, setDocumentName] = useState(getCurrentDocumentName);
-
-  console.log( getCurrentDocumentName);
   
 
   useEffect(() => {
@@ -20,6 +18,7 @@ import { useState, useEffect } from "react";
 
   const handleDocumentNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDocumentName(e.target.value);
+    getCurrentDocumentName === e.target.value
 
   };
 

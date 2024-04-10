@@ -12,6 +12,7 @@ class DocumentStore {
       documents: observable,
       currentDocumentId: observable,
       getCurrentDocumentName: computed,
+      getCurrentId: computed,
       setCurrentDocumentId: action,
       addDocument: action,
       generateId: action,
@@ -26,9 +27,13 @@ class DocumentStore {
 
   get getCurrentDocumentName() {
     const document = this.documents.find(doc => doc.id === this.currentDocumentId);
-    return document?.name ?? '';
+    return document?.name ?? 'welcome.md';
   }
-
+ 
+  get getCurrentId(){
+    const document = this.documents.find(doc => doc.id === this.currentDocumentId);
+    return document?.id ?? 2;
+  }
   setCurrentDocumentId(docId: number) {
     this.currentDocumentId = docId;
     
@@ -57,7 +62,7 @@ class DocumentStore {
     };
 
     this.currentDocumentId = newDocumentId;
-    this.documents.unshift(newDocument);
+    this.documents = [newDocument, ...this.documents]
     return newDocumentId;
   }
 

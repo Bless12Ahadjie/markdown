@@ -1,12 +1,14 @@
+'use client'
 import Image from "next/image";
 import previewOn from "../../../public/icon-show-preview.svg"
 import { observer } from 'mobx-react-lite';
 import { useEffect, useState } from 'react';
 import Markdown from 'react-markdown';
 import documentStore from '../../core/libraries/forDocumentStore';
+import store from "@/app/core/libraries/sidenavStore";
 
 const MarkdownView = () => {
-    const previewSelected = false
+    const { previewSelected, togglePreview} = store;
     
 
     return(

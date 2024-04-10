@@ -9,7 +9,7 @@ const MarkdownBody = () => {
         <main className="flex dark:bg-black-600">
              
              <MarkdownView></MarkdownView>
-            <Preview currentDocumentId={documentStore.currentDocumentId}></Preview>  
+            <Preview currentDocumentId={documentStore.currentDocumentId} getCurrentId={documentStore.getCurrentId}></Preview>  
         </main>
     )
 }

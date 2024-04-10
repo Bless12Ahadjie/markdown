@@ -25,7 +25,7 @@ const Header = observer(() => {
                     <div className='flex justify-start items-center gap-6'>
                         <Logo></Logo>
    
-                        <div className='h-12 w-0.1 bg-black-200'></div>
+                        <div className='hidden sm:block h-12 w-0.1 bg-black-200'></div>
                         <DocumentName getCurrentDocumentName={documentStore.getCurrentDocumentName}  updateDocumentName={documentStore.updateDocumentName} ></DocumentName>
 
                     </div>
