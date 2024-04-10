@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { btns } from "@/app/core/type/button "
+import { btns } from "@/app/core/type/Types"
 
 
 

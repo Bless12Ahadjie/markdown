@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { observer } from "mobx-react";
-import documentStore from "../../core/libraries/addDocumentStore";
+import documentStore from "../../core/libraries/forDocumentStore";
 
 const DeleteBtn = observer(() => {
   const handleDeleteDocument = () => {

@@ -1,21 +1,15 @@
 'use client'
 import Image from "next/image";
 import { observer, } from "mobx-react";
-import documentStore from "../../core/libraries/addDocumentStore";
+import documentStore from "../../core/libraries/forDocumentStore";
 import { useState, useEffect } from "react";
 
   console.log();
   const DocumentName = observer(({ getCurrentDocumentName, updateDocumentName}: { getCurrentDocumentName:string,  updateDocumentName: (newName: string) => void }) => {
  
     const [documentName, setDocumentName] = useState(getCurrentDocumentName);
-//   console.log(documentName);
-  console.log( getCurrentDocumentName);
-//   const currentDocument = documentStore.documents.find((doc) => 
-//   doc.id ===  documentStore.currentDocumentId
-  
-  
-//   );
 
+  console.log( getCurrentDocumentName);
   
 
   useEffect(() => {

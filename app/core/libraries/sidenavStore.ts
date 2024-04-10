@@ -1,6 +1,6 @@
 
 import { makeAutoObservable } from 'mobx';
-import documentStore from './addDocumentStore';
+import documentStore from './forDocumentStore';
 
 class Store {
   isSidebarOpen: boolean;

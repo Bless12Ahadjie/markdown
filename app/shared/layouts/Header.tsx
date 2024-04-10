@@ -6,7 +6,7 @@ import DocumentName from "../components/DocumentName";
 import DeleteBtn from "../components/DeleteBtn";
 import Toggle from "../components/Toggle";
 import store from '../../core/libraries/sidenavStore';
-import documentStore from '../../core/libraries/addDocumentStore';
+import documentStore from '../../core/libraries/forDocumentStore';
 import { observer } from 'mobx-react';
 
 const Header = observer(() => {
