@@ -1,9 +1,9 @@
 
 import { ToastContainer } from "react-toastify"
-import MarkdownBody from "../pages/MarkdownBody"
-import Header from "./Header"
-import Sidenav from "./Sidenav"
-import MarkdownView from "./markdownVIew"
+import MarkdownBody from "./MarkdownBody"
+import Header from "../layouts/Header"
+import Sidenav from "../layouts/Sidenav"
+import MarkdownView from "../layouts/markdownVIew"
 
 export default function Applayout (){
 return(
