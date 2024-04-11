@@ -3,12 +3,15 @@ import documentStore from './forDocumentStore';
 
 class Store {
   isSidebarOpen: boolean;
-  previewSelected = false;
+  previewSelected = true;
+  isDarkMode = false;
   documentStore = documentStore;
 
   constructor() {
+  
     this.isSidebarOpen = localStorage.getItem('isSidebarOpen') === 'open';
-    this.previewSelected = localStorage.getItem('previewSelected') === 'false';
+    this.previewSelected = localStorage.getItem('previewSelected') === 'true';
+    this.initializeDarkMode();
 
     makeAutoObservable(this);
   }
@@ -22,6 +25,23 @@ class Store {
     this.previewSelected = !this.previewSelected;
     localStorage.setItem('previewSelected', this.previewSelected.toString());
   }
+
+  toggleDarkMode = () => {
+    this.isDarkMode = !this.isDarkMode;
+    document.getElementsByTagName("body")[0].classList.toggle("dark");
+    localStorage.setItem('isDarkMode', this.isDarkMode.toString());
+  };
+
+
+ initializeDarkMode = () => {
+    const storedDarkMode = localStorage.getItem('isDarkMode');
+    this.isDarkMode = storedDarkMode ? JSON.parse(storedDarkMode) : false;
+    if (this.isDarkMode) {
+      document.getElementsByTagName("body")[0].classList.add("dark");
+    }
+  };
+
+
 }
 
 const store = new Store();
