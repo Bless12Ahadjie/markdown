@@ -1,7 +1,7 @@
 'use client'
 
 import { observer } from 'mobx-react-lite';
-import store from '@/app/core/libraries/sidenavStore';
+import store from '@/app/core/stores/sidenavStore';
 
 
 const NightMode = observer(() => {

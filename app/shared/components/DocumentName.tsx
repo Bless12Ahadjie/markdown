@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { observer, } from "mobx-react";
-import documentStore from "../../core/libraries/forDocumentStore";
+import documentStore from "../../core/stores/forDocumentStore";
 import { useState, useEffect } from "react";
 
 

@@ -1,6 +1,6 @@
 
 import Applayout from './shared/layouts/Applayout'
-import documentStore from "@/app/core/libraries/forDocumentStore";
+import documentStore from "@/app/core/stores/forDocumentStore";
 import MarkdownBody from './shared/pages/MarkdownBody';
 import { ToastContainer } from 'react-toastify';
 

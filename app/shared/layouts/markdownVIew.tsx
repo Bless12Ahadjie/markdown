@@ -4,8 +4,8 @@ import previewOn from "../../../public/icon-show-preview.svg";
 import { observer } from 'mobx-react-lite';
 import { ChangeEventHandler, useEffect, useState,ChangeEvent } from 'react';
 import Markdown from 'react-markdown';
-import documentStore from '../../core/libraries/forDocumentStore';
-import store from "@/app/core/libraries/sidenavStore";
+import documentStore from '../../core/stores/forDocumentStore';
+import store from "@/app/core/stores/sidenavStore";
 
 const MarkdownView = observer(() => {
     const { previewSelected, isSidebarOpen } = store;

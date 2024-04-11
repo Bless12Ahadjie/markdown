@@ -1,4 +1,4 @@
-import documentStore from "@/app/core/libraries/forDocumentStore";
+import documentStore from "@/app/core/stores/forDocumentStore";
 import { Document } from "@/app/core/type/Types";
 import { useState } from "react";
 import Image from "next/image";

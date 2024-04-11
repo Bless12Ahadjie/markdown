@@ -1,6 +1,6 @@
 import Preview from "../layouts/Prieview";
 import MarkdownView from "../layouts/markdownVIew";
-import documentStore from "@/app/core/libraries/forDocumentStore";
+import documentStore from "@/app/core/stores/forDocumentStore";
 
 
 const MarkdownBody = () => {

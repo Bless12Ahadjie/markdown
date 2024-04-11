@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { observer } from 'mobx-react';
-import Store from '../../core/libraries/sidenavStore';
+import Store from '../../core/stores/sidenavStore';
 import Image from 'next/image';
 
 import MenuIcon from '../../../public/icon-menu.svg';
