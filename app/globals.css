@@ -10,6 +10,11 @@
   background: #efad8a;
   color: #ffffff;
 }
+
+/* ::-webkit-scrollbar{
+  direction: vertical;
+} */
+
 ::-webkit-scrollbar:horizontal{
   width: 0;
 }
