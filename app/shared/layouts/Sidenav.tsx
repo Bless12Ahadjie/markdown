@@ -46,7 +46,19 @@ const Sidenav = observer(() => {
      
             ))}
           </ul>
-          <ToastContainer />
+          <ToastContainer 
+                    position="bottom-left"
+                    autoClose={1000}
+                    hideProgressBar
+                    newestOnTop
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    bodyClassName="toastBody"
+          />
+
         </div>
         <NightMode></NightMode>
       </div>
