@@ -4,23 +4,19 @@ import { observer, } from "mobx-react";
 import documentStore from "../../core/libraries/forDocumentStore";
 import { useState, useEffect } from "react";
 
-  console.log();
-  const DocumentName = observer(({ getCurrentDocumentName, updateDocumentName}: { getCurrentDocumentName:string,  updateDocumentName: (newName: string) => void }) => {
- 
+
+  const DocumentName = observer(() => {
+    const { getCurrentDocumentName, updateDocumentName } = documentStore;
     const [documentName, setDocumentName] = useState(getCurrentDocumentName);
   
-
-  useEffect(() => {
-    if (getCurrentDocumentName) {
-        setDocumentName(getCurrentDocumentName)
-    }
-  }, [getCurrentDocumentName]);
-
-  const handleDocumentNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDocumentName(e.target.value);
-    getCurrentDocumentName === e.target.value
-
-  };
+    useEffect(() => {
+      setDocumentName(getCurrentDocumentName);
+    }, [getCurrentDocumentName]);
+  
+    const handleDocumentNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setDocumentName(e.target.value);
+      updateDocumentName(e.target.value);
+    };
 
   return (
     <main>
@@ -39,7 +35,7 @@ import { useState, useEffect } from "react";
             value={documentName}
             onBlur={()=> updateDocumentName(documentName)}
             onChange={handleDocumentNameChange}
-            className="border-b-transparent bg-transparent bg-black-400 text-white text-sm accent-black-400 focus:border-b focus:outline-none"
+            className="border-b-transparent bg-transparent bg-black-400 text-white text-sm accent-black-400 focus:border-b focus:outline-none caret-[#E46643]"
             type="text"
           />
         </div>
