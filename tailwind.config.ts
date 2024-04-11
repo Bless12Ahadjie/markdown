@@ -22,7 +22,9 @@ const config: Config = {
       'white':'#ffffff',
       'orange-600':'#E46643',
       'orange-400':'#F39765',
-      'gray': '#B4B4B4'
+      'gray': '#B4B4B4',
+      modalOverlayDark: "rgb(21, 22, 25, 0.5)",
+      modalOverlay: "rgba(124, 129, 135, 0.5)",
     }
     ,
     fontSize: {
@@ -43,7 +45,7 @@ const config: Config = {
         '72': '72px',
         '30': '30px',
         '13': '13.71px',
-        '152': '156px',
+        '152': '180px',
         '16': '16px',
         '18': '18px',
         '22': '22.63px',
@@ -57,8 +59,13 @@ const config: Config = {
         '40': '40px',
         '20': '20px',
         '22': '22.63px'
-
       }
+      ,
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        serif: ["Roboto Slab", "serif"],
+        'mono': ["Roboto Mono", "monospace"],
+      } 
       ,
       gap:{
         '25':'25px',
