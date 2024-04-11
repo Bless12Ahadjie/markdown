@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import {Roboto_Mono } from 'next/font/google';
+import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
+
 
 const robo = Roboto_Mono({
   weight: ['400','300'],
