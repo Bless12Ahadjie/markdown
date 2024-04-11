@@ -2,7 +2,7 @@
 
 import Button from "../components/SaveButton";
 import Logo from "../components/Logo";
-import DocumentName from "../components/DocumentName";
+import DocumentName from "../components/DocummentName/DocumentName";
 import DeleteBtn from "../components/DeleteBtn";
 import Toggle from "../components/Toggle";
 import store from '../../core/stores/sidenavStore';

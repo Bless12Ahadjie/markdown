@@ -4,7 +4,7 @@ import previewOn from "../../../public/icon-show-preview.svg";
 import { observer } from 'mobx-react-lite';
 import { ChangeEventHandler, useEffect, useState,ChangeEvent } from 'react';
 import Markdown from 'react-markdown';
-import documentStore from '../../core/stores/forDocumentStore';
+import documentStore from '../../../core/stores/forDocumentStore';
 import store from "@/app/core/stores/sidenavStore";
 
 const MarkdownView = observer(() => {

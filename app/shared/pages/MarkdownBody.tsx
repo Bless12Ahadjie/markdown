@@ -1,5 +1,5 @@
-import Preview from "../layouts/Prieview";
-import MarkdownView from "../layouts/markdownVIew";
+import Preview from "../components/markdownEditor/Prieview";
+import MarkdownView from "../components/markdownEditor/Editor";
 import documentStore from "@/app/core/stores/forDocumentStore";
 
 

@@ -8,10 +8,10 @@ import Image from "next/image";
 import { toast,ToastContainer } from "react-toastify";
 import store from '../../core/stores/sidenavStore';
 import documentStore from '../../core/stores/forDocumentStore';
-import NightMode from './NightMode';
+import NightMode from '../components/NightMode';
 import { set } from 'mobx';
 import { Document } from '@/app/core/type/Types';
-import SideDocumentName from '../components/sideDocumentName';
+import SideDocumentName from '../components/DocummentName/SideNavDocumentName';
 
 const Sidenav = observer(() => {
 
