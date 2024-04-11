@@ -4,14 +4,13 @@ import documentStore from "@/app/core/libraries/forDocumentStore";
 
 
 const MarkdownBody = () => {
-
+    const displayPreviewOnly = true;
     return (
-        <main className="flex dark:bg-black-600">
-             
-             <MarkdownView></MarkdownView>
-            <Preview currentDocumentId={documentStore.currentDocumentId} getCurrentId={documentStore.getCurrentId}></Preview>  
-        </main>
-    )
-}
+      <main className={`grid h-screen w-full dark:bg-black-600 ${displayPreviewOnly ? "grid-cols-1" : "md:grid-cols-2"}`}>
+        <MarkdownView />
+        <Preview />
+      </main>
+    );
+  };
 
 export default MarkdownBody;
