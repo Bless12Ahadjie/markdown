@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import previewOn from "../../../public/icon-show-preview.svg";
+import previewOn from "../../../../public/icon-show-preview.svg";
 import { observer } from 'mobx-react-lite';
 import { ChangeEventHandler, useEffect, useState,ChangeEvent } from 'react';
 import Markdown from 'react-markdown';

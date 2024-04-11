@@ -1,8 +1,8 @@
 'use client'
 
 import Markdown, { ExtraProps } from "react-markdown";
-import PreviewOn from "../../../public/icon-show-preview.svg"
-import PreviewOff from "../../../public/icon-hide-preview.svg"
+import PreviewOn from "../../../../public/icon-show-preview.svg"
+import PreviewOff from "../../../../public/icon-hide-preview.svg"
 import Image from "next/image";
 import { observer } from "mobx-react";
 import store from '../../../core/stores/sidenavStore';
