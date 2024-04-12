@@ -1,23 +1,27 @@
-'use client'
+"use client";
 import Image from "next/image";
-import { observer, } from "mobx-react";
+import { observer } from "mobx-react";
 import documentStore from "../../../core/stores/forDocumentStore";
 import { useState, useEffect } from "react";
 
+const DocumentName = observer(() => {
 
-  const DocumentName = observer(() => {
-    const { getCurrentDocumentName, updateDocumentName } = documentStore;
-    const [documentName, setDocumentName] = useState(getCurrentDocumentName);
-  
-    useEffect(() => {
-      setDocumentName(getCurrentDocumentName);
-    }, [getCurrentDocumentName]);
-  
-    const handleDocumentNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setDocumentName(e.target.value);
-      updateDocumentName(e.target.value);
-    };
+  const { getCurrentDocumentName, updateDocumentName } = documentStore;
+  const [documentName, setDocumentName] = useState(getCurrentDocumentName);
 
+
+  useEffect(() => {
+    setDocumentName(getCurrentDocumentName);
+  }, [getCurrentDocumentName]);
+
+
+  const handleDocumentNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setDocumentName(event.target.value);
+    updateDocumentName(event.target.value);
+  };
+
+
+  
   return (
     <main>
       <div className="flex justify-center items-center gap-5">
@@ -29,13 +33,15 @@ import { useState, useEffect } from "react";
           height={10}
         />
         <div>
-          <p className="text-black-100 text-xxsm">Document Name</p>
+          <p className="hidden md:block  text-black-100 text-xxsm">
+            Document Name
+          </p>
           <input
             id="text"
             value={documentName}
-            onBlur={()=> updateDocumentName(documentName)}
+            onBlur={() => updateDocumentName(documentName)}
             onChange={handleDocumentNameChange}
-            className="border-b-transparent bg-transparent bg-black-400 text-white text-sm accent-black-400 focus:border-b focus:outline-none caret-[#E46643]"
+            className="border-b-transparent bg-transparent bg-black-400 text-white text-xsm md:text-sm w-[88px] md:w-full accent-black-400 focus:border-b focus:outline-none caret-[#E46643]"
             type="text"
           />
         </div>

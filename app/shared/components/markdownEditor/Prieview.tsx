@@ -23,7 +23,7 @@ const Preview = observer(() => {
 
   return (
     <section
-    className={`flex h-[calc(100vh-65px)] flex-col absolute mt-[70px] border-l   pb-4 dark:border-black-100 ${previewSelected ? ` ${isSidebarOpen? "right-[-340px]": "right-[0px] "} border-none w-full  left-[320px]` : 'border-gray w-1/2  ml-[640px]' } `}
+    className={`flex h-[calc(100vh-65px)] flex-col absolute mt-[70px] border-l   pb-4 dark:border-black-100 ${previewSelected ? ` ${isSidebarOpen? "right-[-340px]": "right-[0px] "} border-none w-full left-0 md:left-[320px]` : 'border-gray w-1/2 ml-0 md:ml-[20px] lg:ml-[640px]' } `}
     >
       <div
         className={`fixed z-0 flex h-10 items-center justify-between bg-gray-200 px-4 py-3 dark:bg-black-500 ${
@@ -47,7 +47,7 @@ const Preview = observer(() => {
         .filter((doc) => doc.id === getCurrentId)
         .map((doc) => (
           <Markdown
-          className={` mt-6 overflow-y-auto p-6 dark:bg-black-600 dark:text-white h-[calc(100vh+70px)] ${ previewSelected? ` overflow-y-auto w-1/2`:'w-ful'}`}
+          className={` mt-6 overflow-y-auto p-6 dark:bg-black-600 dark:text-white h-[calc(100vh+70px)] ${ previewSelected? ` overflow-y-auto w-full md:w-1/2`:'w-ful'}`}
 
           components={
             {
@@ -109,6 +109,7 @@ const Preview = observer(() => {
                         padding: '20px 40px',
                         borderRadius: '5px',
                         color: '#2B2D31',
+                        
                       }}
                     >
                       <code className={`${className} dark`} {...rest}>

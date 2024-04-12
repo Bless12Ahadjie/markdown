@@ -12,3 +12,10 @@ export interface Document {
     name: string;
     content: string;
   }
+
+  export interface CustomCodeProps {
+    node: React.ReactNode;
+    className: string;
+    children: React.ReactNode;
+    inline: React.ReactNode;
+  }
