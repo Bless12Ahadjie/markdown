@@ -132,6 +132,21 @@ class DocumentStore {
   saveCurrentDocument = () => {
     const currentDocument = this.documents.find((doc) => doc.id === this.currentDocumentId);
     if (currentDocument) {
+      const blob = new Blob([currentDocument.content], {
+        type: "text/plain",
+      });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = currentDocument.name;
+      anchor.style.display = "none";
+
+      document.body.appendChild(anchor);
+      anchor.click();
+
+      document.body.removeChild(anchor);
+      URL.revokeObjectURL(url);
+
       currentDocument.content = this.documentContent;
       this.saveDocumentsToStorage();
     }

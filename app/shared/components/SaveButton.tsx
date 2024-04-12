@@ -11,9 +11,9 @@ const Button = ({name,style,className}:btns) => {
     const handleSaveDocument = () => {
         saveCurrentDocument();
         const currentDocument = documents.find((doc) => doc.id === currentDocumentId);
-        if (currentDocument) {
-          toast.success(`"${currentDocument.name}" was saved successfully!`);
-        }
+        // if (currentDocument) {
+        // //   toast.success(`"${currentDocument.name}" was saved successfully!`);
+        // }
       };
 
 

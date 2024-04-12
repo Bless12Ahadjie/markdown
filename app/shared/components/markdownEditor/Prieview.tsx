@@ -23,7 +23,7 @@ const Preview = observer(() => {
 
   return (
     <section
-    className={`flex h-[calc(100vh-65px)] flex-col absolute mt-[70px] border-l   pb-4 dark:border-black-100 ${previewSelected ? ` ${isSidebarOpen? "right-[-340px]": "right-[0px] "} border-none w-full left-0 md:left-[320px]` : 'border-gray w-1/2 hidden md:block ml-0 md:ml-[20px] lg:ml-[640px]' } `}
+    className={`flex h-[calc(100vh-65px)] flex-col absolute mt-[70px] border-l   pb-4 dark:border-black-100 ${previewSelected ? ` ${isSidebarOpen? "right-[-340px]": "right-[0px] "} border-none w-full left-0 md:left-[320px]` : 'border-gray w-1/2 hidden md:block ml-0 md:ml-[420px] lg:ml-[640px]' } `}
     >
       <div
         className={`fixed z-0 h flex h-10 items-center justify-between bg-gray-200 px-4 py-3 dark:bg-black-500 ${
