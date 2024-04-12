@@ -1,6 +1,6 @@
-# MyMarkdown App
+# markdown-edzitor
 
-My Markdown is a powerful and user-friendly markdown editor that allows you to create, edit, and manage your markdown documents with ease. This application is built using Next.js, Tailwind CSS, React Markdown, and React Toastify, and is hosted on Vercel.
+markdown-edzitor is a powerful and user-friendly editor that allows you to easily create, edit, and manage your markdown documents. This application is built using Next.js, Tailwind CSS, React Markdown, and React Toastify, and is hosted on Vercel.
 
 ## Features
 
@@ -12,12 +12,12 @@ My Markdown is a powerful and user-friendly markdown editor that allows you to c
 
 ## Installation
 
-To install MyMarkdown locally, follow these steps:
+To install markdown-edzitor locally, follow these steps:
 
 1. Clone the repository to your local machine:
 
 ```
-git clone https://github.com/your-username/my-markdown-app.git
+git clone https://github.com/Bless12Ahadjie/markdown.git
 ```
 
 2. Navigate to the project directory:
