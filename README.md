@@ -1,6 +1,6 @@
-# markdown-edzitor
+# markdown-edzeetor
 
-markdown-edzitor is a powerful and user-friendly editor that allows you to easily create, edit, and manage your markdown documents. This application is built using Next.js, Tailwind CSS, React Markdown, and React Toastify, and is hosted on Vercel.
+markdown-edzeetor is a powerful and user-friendly editor that allows you to easily create, edit, and manage your markdown documents. This application is built using Next.js, Tailwind CSS, React Markdown, and React Toastify, and is hosted on Vercel.
 
 ## Features
 
@@ -61,7 +61,7 @@ npm run dev
 The design of MyMarkdown was created using [Figma](https://www.figma.com/).
 ## Live Preview
 
-You can check out the live preview of My Markdown at [myMarkdown.vercel.app](https://myMarkdown.vercel.app).
+You can check out the live preview of My Markdown at [myMarkdown.vercel.app](https://markdown-edzitor.vercel.app/).
 
 ## Contributing
 
