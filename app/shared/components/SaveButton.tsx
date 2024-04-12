@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image"
 import { btns } from "@/app/core/type/Types"
 

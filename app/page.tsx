@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import Applayout from './shared/pages/Applayout'
 
 export default function Home() {

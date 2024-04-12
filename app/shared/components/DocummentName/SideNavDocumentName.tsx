@@ -1,3 +1,5 @@
+'use client';
+
 import documentStore from "@/app/core/stores/forDocumentStore";
 import { Document } from "@/app/core/type/Types";
 import { useState } from "react";
