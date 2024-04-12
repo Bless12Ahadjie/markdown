@@ -6,7 +6,7 @@ import store from "@/app/core/stores/sidenavStore";
 const NightMode = observer(() => {
 
   const { isDarkMode, toggleDarkMode } = store;
-
+  console.log(isDarkMode)
   const changeMode = () => {
     toggleDarkMode();
   };
