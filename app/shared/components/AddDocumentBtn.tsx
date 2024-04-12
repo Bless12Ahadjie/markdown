@@ -1,4 +1,5 @@
-// import { toast } from "react-toastify";
+'use client';
+
 interface Props {
     onClick: () => void;
 }

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Markdown, { ExtraProps } from "react-markdown";
 import PreviewOn from "../../../../public/icon-show-preview.svg"

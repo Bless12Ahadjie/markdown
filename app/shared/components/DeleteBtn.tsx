@@ -1,4 +1,5 @@
-import Image from "next/image";
+'use client';
+
 import { observer } from "mobx-react";
 import documentStore from "../../core/stores/forDocumentStore";
 import { useState } from "react";
