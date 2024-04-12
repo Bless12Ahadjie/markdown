@@ -30,10 +30,12 @@ class Store {
     this.isDarkMode = !this.isDarkMode;
     document.getElementsByTagName("body")[0].classList.toggle("dark");
     localStorage.setItem('isDarkMode', this.isDarkMode.toString());
+    console.log("Darkmode: ",this.isDarkMode.toString());
   };
 
 
  initializeDarkMode = () => {
+  
     const storedDarkMode = localStorage.getItem('isDarkMode');
     this.isDarkMode = storedDarkMode ? JSON.parse(storedDarkMode) : false;
     if (this.isDarkMode) {
