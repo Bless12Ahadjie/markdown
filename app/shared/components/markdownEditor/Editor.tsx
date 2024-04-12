@@ -30,7 +30,7 @@ const MarkdownView = observer(() => {
         previewSelected ? "hidden " : "w-full md:w-1/2 lg:w-1/2"
       } relative mt-[70px] ${
         isSidebarOpen
-          ? "w-[640px] md:w-1/2 lg:w-[640px]"
+          ? "w-[640px] md:w-[640px]"
           : "w-full md:w-1/2 lg:w-1/2"
       }`}
     >
