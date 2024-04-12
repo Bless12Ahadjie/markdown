@@ -61,7 +61,7 @@ npm run dev
 The design of MyMarkdown was created using [Figma](https://www.figma.com/).
 ## Live Preview
 
-You can check out the live preview of My Markdown at [myMarkdown.vercel.app](https://markdown-edzitor.vercel.app/).
+You can check out the live preview of My Markdown at [Markdown-Edzeetor](https://markdown-edzitor.vercel.app/).
 
 ## Contributing
 
