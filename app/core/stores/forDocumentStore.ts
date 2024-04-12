@@ -29,6 +29,7 @@ class DocumentStore {
     this.loadDocumentsFromStorage();
   }
 
+
   loadDocumentsFromStorage = () => {
     const storedDocuments = localStorage.getItem("documents");
     if (storedDocuments) {
@@ -39,6 +40,7 @@ class DocumentStore {
     }
 
     const storedCurrentDocumentId = localStorage.getItem("currentDocumentId");
+
     if (storedCurrentDocumentId) {
       this.currentDocumentId = parseInt(storedCurrentDocumentId);
       this.documentContent = this.documents.find((doc) => doc.id === this.currentDocumentId)?.content || "";
@@ -115,7 +117,7 @@ class DocumentStore {
   };
 
   deleteDocument = (id?: number | null) => {
-    // Check if the current document has an ID of 2 and prevent deletion
+  
     if (this.currentDocumentId === 2) {
       return;
     }
@@ -127,6 +129,14 @@ class DocumentStore {
     this.saveDocumentsToStorage();
   };
 
+  saveCurrentDocument = () => {
+    const currentDocument = this.documents.find((doc) => doc.id === this.currentDocumentId);
+    if (currentDocument) {
+      currentDocument.content = this.documentContent;
+      this.saveDocumentsToStorage();
+    }
+  };
+  
   updateDocumentContent = (content: string) => {
     const document: Document | undefined = this.documents.find((doc) => doc.id === this.currentDocumentId);
     if (document) {
