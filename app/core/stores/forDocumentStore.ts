@@ -1,6 +1,6 @@
 import { makeObservable, observable, action, computed } from "mobx";
 import { Document } from "../type/Types";
-
+import data from "../data/data.json";
 
 class DocumentStore {
   documents: Document[] = [];
@@ -24,6 +24,8 @@ class DocumentStore {
       saveDocumentsToStorage: action,
     });
 
+    this.documents = data;
+    this.currentDocumentId = 2;
     this.loadDocumentsFromStorage();
   }
 
@@ -31,6 +33,9 @@ class DocumentStore {
     const storedDocuments = localStorage.getItem("documents");
     if (storedDocuments) {
       this.documents = JSON.parse(storedDocuments);
+    } else {
+      // If there are no stored documents, use the data from the JSON file
+      this.documents = data;
     }
 
     const storedCurrentDocumentId = localStorage.getItem("currentDocumentId");
@@ -50,7 +55,7 @@ class DocumentStore {
 
   get getCurrentDocumentName() {
     const document = this.documents.find((doc) => doc.id === this.currentDocumentId);
-    return document?.name ?? "welcome.md";
+    return document?.name ?? " ";
   }
 
   get getCurrentId() {
@@ -110,9 +115,15 @@ class DocumentStore {
   };
 
   deleteDocument = (id?: number | null) => {
+    // Check if the current document has an ID of 2 and prevent deletion
+    if (this.currentDocumentId === 2) {
+      return;
+    }
+
     this.documents = this.documents.filter((doc) => doc.id !== this.currentDocumentId);
-    this.currentDocumentId = null;
-    this.documentContent = "";
+    const index = this.documents.findIndex((doc) => doc.id === this.currentDocumentId);
+    this.currentDocumentId = this.documents[index + 1]?.id || null;
+    this.documentContent = this.documents.find((doc) => doc.id === this.currentDocumentId)?.content || "";
     this.saveDocumentsToStorage();
   };
 

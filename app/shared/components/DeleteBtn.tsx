@@ -22,8 +22,15 @@ const DeleteBtn = observer(() => {
     );
 
     if (currentDocument) {
-      deleteDocument(currentDocumentId);
-      toast.success(`"${currentDocument.name}" was deleted successfully!`);
+      if (currentDocument.id === 2) {
+        // Show a toast message if the user tries to delete the document with ID 2
+        toast.error("The document 'welcome' cannot be deleted.");
+        setIsModalOpen(false);
+      } else {
+        deleteDocument(currentDocumentId);
+        toast.success(`"${currentDocument.name}" was deleted successfully!`);
+        setIsModalOpen(false);
+      }
     }
 
     setIsModalOpen(false);
