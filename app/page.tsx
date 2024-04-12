@@ -1,4 +1,3 @@
-'use client';
 
 import Applayout from './shared/pages/Applayout'
 

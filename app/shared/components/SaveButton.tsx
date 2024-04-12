@@ -1,6 +1,6 @@
 'use client';
-import documentStore from "@/app/core/stores/forDocumentStore";
-import { btns } from "@/app/core/type/Types"
+import documentStore from "@/lib/core/stores/forDocumentStore";
+import { btns } from "@/lib/core/type/Types";
 import { toast } from "react-toastify";
 
 

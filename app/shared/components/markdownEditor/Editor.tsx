@@ -3,7 +3,7 @@ import Image from "next/image";
 import previewOn from "../../../../public/icon-show-preview.svg";
 import { observer } from "mobx-react-lite";
 import {  ChangeEvent } from "react";
-import store from "@/app/core/stores/sidenavStore";
+import store from "@/lib/core/stores/sidenavStore";
 
 
 

@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { observer } from "mobx-react";
-import documentStore from "../../../core/stores/forDocumentStore";
 import { useState, useEffect } from "react";
+import documentStore from "@/lib/core/stores/forDocumentStore";
 
 const DocumentName = observer(() => {
 

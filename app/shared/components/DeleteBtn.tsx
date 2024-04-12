@@ -1,7 +1,7 @@
 'use client';
 
+import documentStore from "@/lib/core/stores/forDocumentStore";
 import { observer } from "mobx-react";
-import documentStore from "../../core/stores/forDocumentStore";
 import { useState } from "react";
 import { toast } from "react-toastify";
 

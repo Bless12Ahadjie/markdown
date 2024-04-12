@@ -1,17 +1,13 @@
 'use client';
 
-import { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { observer } from 'mobx-react';
 import AddDocumentBtn from "../components/AddDocumentBtn";
-import Image from "next/image";
 import { toast,ToastContainer } from "react-toastify";
-import store from '../../core/stores/sidenavStore';
-import documentStore from '../../core/stores/forDocumentStore';
 import NightMode from '../components/NightMode';
-import { set } from 'mobx';
-import { Document } from '@/app/core/type/Types';
 import SideDocumentName from '../components/DocummentName/SideNavDocumentName';
+import store from '@/lib/core/stores/sidenavStore';
+import documentStore from '@/lib/core/stores/forDocumentStore';
 
 const Sidenav = observer(() => {
 

@@ -5,7 +5,7 @@ import PreviewOn from "../../../../public/icon-show-preview.svg"
 import PreviewOff from "../../../../public/icon-hide-preview.svg"
 import Image from "next/image";
 import { observer } from "mobx-react";
-import store from '../../../core/stores/sidenavStore';
+import store from "@/lib/core/stores/sidenavStore";
 
 
 interface CustomCodeProps {
@@ -46,6 +46,7 @@ const Preview = observer(() => {
       {documentStore.documents
         .filter((doc) => doc.id === getCurrentId)
         .map((doc) => (
+
           <Markdown
           className={` mt-6 overflow-y-auto p-6 dark:bg-black-600 dark:text-white h-[calc(100vh+70px)] ${ previewSelected? ` overflow-y-auto w-full md:w-1/2`:'w-ful'}`}
 
@@ -102,7 +103,7 @@ const Preview = observer(() => {
                   // }
                 
                   return (
-                    <pre
+                    <div
                       className={`${className} dark`}
                       style={{
                         backgroundColor: '#F5F5F5',
@@ -115,7 +116,7 @@ const Preview = observer(() => {
                       <code className={`${className} dark`} {...rest}>
                         {children}
                       </code>
-                    </pre>
+                    </div>
                   );
                 },
               }}

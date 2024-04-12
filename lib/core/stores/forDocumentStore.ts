@@ -26,12 +26,15 @@ class DocumentStore {
 
     this.documents = data;
     this.currentDocumentId = 2;
-    this.loadDocumentsFromStorage();
+   this.loadDocumentsFromStorage();
   }
 
 
   loadDocumentsFromStorage = () => {
-    const storedDocuments = localStorage.getItem("documents");
+    if (typeof window === 'undefined') return
+
+    const storedDocuments = window.localStorage.getItem("documents");
+    
     if (storedDocuments) {
       this.documents = JSON.parse(storedDocuments);
     } else {

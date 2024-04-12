@@ -2,15 +2,15 @@
 
 import React from "react";
 import { observer } from "mobx-react";
-import Store from "../../core/stores/sidenavStore";
 import Image from "next/image";
 
 import MenuIcon from "../../../public/icon-menu.svg";
 import CloseIcon from "../../../public/icon-close.svg";
+import store from "@/lib/core/stores/sidenavStore";
 
 const Toggle = observer(() => {
   
-  const { isSidebarOpen, toggleSidebar } = Store;
+  const { isSidebarOpen, toggleSidebar } = store;
 
   return (
     <main>

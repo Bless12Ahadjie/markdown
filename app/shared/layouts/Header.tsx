@@ -5,8 +5,8 @@ import Logo from "../components/Logo";
 import DocumentName from "../components/DocummentName/DocumentName";
 import DeleteBtn from "../components/DeleteBtn";
 import Toggle from "../components/Toggle";
-import store from "../../core/stores/sidenavStore";
 import { observer } from "mobx-react";
+import store from "@/lib/core/stores/sidenavStore";
 
 const Header = observer(() => {
 
