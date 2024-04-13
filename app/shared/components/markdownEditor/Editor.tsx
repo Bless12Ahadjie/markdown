@@ -26,7 +26,7 @@ const MarkdownView = observer(() => {
 
   return (
     <main
-      className={`h-[calc(100vh-65px)] ${
+      className={`h-[calc(100vh-65px)]  ${
         previewSelected ? "hidden " : "w-full md:w-1/2 lg:w-1/2"
       } relative mt-[70px] ${
         isSidebarOpen
@@ -45,7 +45,7 @@ const MarkdownView = observer(() => {
       </div>
 
       <textarea
-        className="mb-4 min-h-[calc(100vh-110px)] w-full resize-none border-none bg-white p-4 pt-2 outline-none dark:bg-black-600 dark:text-white"
+        className="mb-4 min-h-[calc(100vh-110px)] text-black-300 w-full resize-none border-none bg-white p-4 pt-2 outline-none dark:bg-black-600 dark:text-white"
         value={documentContent}
         onChange={handleContentChange}
       />

@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     
     colors:{
+      'black-700': '#000000',
       'black-600':'#151619',
       'black-500':'#1D1F22',
       'black-400':'#2B2D31',
@@ -64,7 +65,7 @@ const config: Config = {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
         serif: ["Roboto Slab", "serif"],
-        'mono': ["Roboto Mono", "monospace"],
+        mono: ['var(--font-roboto-slab)'],
       } 
       ,
       gap:{

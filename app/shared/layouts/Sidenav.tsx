@@ -22,7 +22,7 @@ const Sidenav = observer(() => {
   return (
     <main className="">
       <div
-        className={`sidebar transition-all duration-150 ease-out ${
+        className={`transition-all duration-150 ease-out ${
           store.isSidebarOpen ? "relative" : "absolute"
         }  ${
           store.isSidebarOpen ? "left-[0px]" : "left-[-300px]"

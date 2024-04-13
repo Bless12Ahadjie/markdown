@@ -28,7 +28,7 @@ const DeleteBtn = observer(() => {
         setIsModalOpen(false);
       } else {
         deleteDocument(currentDocumentId);
-        toast.success(`"${currentDocument.name}" was deleted successfully!`);
+        toast.success(`"${currentDocument.name}"  was deleted successfully!`);
         setIsModalOpen(false);
       }
     }
@@ -69,7 +69,7 @@ const DeleteBtn = observer(() => {
             </h4>
             <p className="my-4 text-xsm font-regular text-black-200 dark:text-black-100">
               Are you sure you want to delete the ‘{currentDocument.name}
-              ’document and its contents? This action cannot be reversed.
+              ’ document and its contents? This action cannot be reversed.
             </p>
             <button
               className="primary-btn bg-orange-600 w-[295px] h-[40px] rounded-[4px] cursor-pointer hover:bg-orange-400"

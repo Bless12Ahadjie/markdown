@@ -24,7 +24,7 @@ const SideDocumentName = ({ time, name, id }: Props) => {
         width={10}
         height={10}
       />
-      <button onClick={handleClick} className="w-[150px] max-w-250 text-left">
+      <button onClick={handleClick} className="w-[180px] max-w-250 text-left">
         <span className="text-black-100 text-xxsm">{time}</span> <br />
         <span className="text-white text-sm hover:text-orange-400 dark:text-white max-w-[200px]">
           {name}
