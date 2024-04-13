@@ -11,13 +11,6 @@
   color: #ffffff;
 }
 
-/* ::-webkit-scrollbar{
-  direction: vertical;
-} */
-
-::-webkit-scrollbar:horizontal{
-  width: 0;
-}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -32,6 +25,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 
 
 @layer utilities {
