@@ -62,7 +62,7 @@ const Preview = observer(() => {
                 br: () => <br className="h-[104px]" />,
                 blockquote: (props) => (
                   <div className="border-l-4 rounded-l-sm border-orange-600 bg-gray-200 dark:bg-black-400 px-4 py-2 mb-[24px]">
-                    <blockquote className="text-black-600 ml-3 font-bold dark:text-white ">{props.children}</blockquote>
+                    <span className="text-black-600 ml-3 font-bold dark:text-white ">{props.children}</span>
                   </div>
                 ),
                 ol: (props) => (
@@ -104,16 +104,10 @@ const Preview = observer(() => {
                 
                   return (
                     <div
-                      className={`${className} dark`}
-                      style={{
-                        backgroundColor: '#F5F5F5',
-                        padding: '20px 40px',
-                        borderRadius: '5px',
-                        color: '#2B2D31',
-                        
-                      }}
+                      className={`${className} bg-gray-200 py-[20px] px-[40px] rounded-[5px] dark:bg-black-400`}
+  
                     >
-                      <code className={`${className} dark`} {...rest}>
+                      <code className={`${className} text-black-600 dark:text-white`} {...rest}>
                         {children}
                       </code>
                     </div>

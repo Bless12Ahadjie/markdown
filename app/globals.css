@@ -48,3 +48,12 @@ body{
 .preview:hover{
   filter: #F39765;
 }
+
+.dark .code-wrapper{
+  @apply bg-black-200
+}
+
+.dark{
+  color: #ffffff;
+
+}
