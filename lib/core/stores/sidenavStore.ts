@@ -5,7 +5,6 @@ class Store {
   isSidebarOpen = false;
   previewSelected = false;
   isDarkMode = false;
-  isDarkModeButtonChecked = false;
   documentStore = documentStore;
 
   constructor() {
@@ -30,30 +29,28 @@ class Store {
 
   toggleDarkMode = () => {
     this.isDarkMode = !this.isDarkMode;
-    this.isDarkModeButtonChecked = this.isDarkMode;
+    localStorage.setItem('isDarkMode', this.isDarkMode ? 'dark': 'light');
+    document.getElementsByTagName("body")[0].classList.toggle("dark",this.isDarkMode);
 
-    document.documentElement.classList.toggle('dark', this.isDarkMode);
-    localStorage.setItem('isDarkMode', this.isDarkMode ? 'dark': '');
 
   };
 
   initializeDarkMode = () => {
     if (typeof window === 'undefined') return
     this.isDarkMode = localStorage.getItem('isDarkMode') === 'dark' ? true : false;
+    document.getElementsByTagName("body")[0].classList.toggle("dark" , this.isDarkMode);
+    
   
-    document.documentElement.classList.toggle('dark', this.isDarkMode);
   };
 
   initializeSidebar = () =>{
     if (typeof window === 'undefined') return
-
     this.isSidebarOpen = window.localStorage.getItem('isSidebarOpen') === 'open';
   }
 
   
   initializePreviewSelected = () => {
     if (typeof window === 'undefined') return
-
     this.previewSelected = window.localStorage.getItem('previewSelected') === 'true';
   }
 

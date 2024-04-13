@@ -1,6 +1,8 @@
-# markdown-edzeetor
+# Markdown-Edzitor
+markdown-edzitor(an Amalitech Technical Training Project)
 
-markdown-edzeetor is a powerful and user-friendly editor that allows you to easily create, edit, and manage your markdown documents. This application is built using Next.js, Tailwind CSS, React Markdown, and React Toastify, and is hosted on Vercel.
+## Overview
+markdown-edzitor is a powerful and user-friendly editor that allows you to easily create, edit, and manage your markdown documents. This application is built using Next.js, Tailwind CSS, React Markdown, and React Toastify, and is hosted on Vercel.
 
 ## Features
 
@@ -52,16 +54,17 @@ npm run dev
 ## Technologies Used
 
 - [Next.js](https://nextjs.org/) - React framework for building server-rendered and static websites
+- [TypeScript](https://www.typescriptlang.org/) - TypeScript superset
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [React Markdown](https://github.com/remarkjs/react-markdown) - React library for rendering markdown
 - [React Toastify](https://fkhadra.github.io/react-toastify/) - React library for displaying notifications)
 
 ## Design
 
-The design of MyMarkdown was created using [Figma](https://www.figma.com/).
+The design of markdown-edzitor was created using [Figma](https://www.figma.com/).
 ## Live Preview
 
-You can check out the live preview of My Markdown at [Markdown-Edzeetor](https://markdown-edzitor.vercel.app/).
+You can check out the live preview of App at [Markdown-Edzitor](https://markdown-edzitor.vercel.app/).
 
 ## Contributing
 
@@ -71,4 +74,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 This project is licensed under the [MIT License](LICENSE).
 
-Enjoy using MyMarkdown! 🚀
+Enjoy using Markdown-Edzitor! 🚀
