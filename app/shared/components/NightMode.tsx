@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import store from "@/lib/core/stores/sidenavStore";
 import { observer } from "mobx-react-lite";
 
@@ -24,9 +24,8 @@ const NightMode = observer(() => {
           aria-label={isDarkMode ? "light mode" : "dark mode"}
         >
           <span
-            className={`bg-white h-3 w-3 rounded-full transition-all ${
-              !isDarkMode ? "translate-x-[170%]" : null
-            }`}
+            className={`bg-white h-3 w-3 rounded-full transition-all ${!isDarkMode ? "translate-x-[170%]" : null
+              }`}
           ></span>
         </button>
         <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">

@@ -9,9 +9,7 @@ import { observer } from "mobx-react";
 import store from "@/lib/core/stores/sidenavStore";
 
 const Header = observer(() => {
-
-    const {isSidebarOpen } = store;
-    
+  const { isSidebarOpen } = store;
 
   return (
     <main

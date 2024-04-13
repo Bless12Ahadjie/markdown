@@ -1,4 +1,3 @@
-import { ReactElement, ReactSVGElement } from "react";
 
 export type btns = {
     name?: string;

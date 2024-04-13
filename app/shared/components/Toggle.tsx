@@ -9,15 +9,13 @@ import CloseIcon from "../../../public/icon-close.svg";
 import store from "@/lib/core/stores/sidenavStore";
 
 const Toggle = observer(() => {
-  
   const { isSidebarOpen, toggleSidebar } = store;
 
   return (
     <main>
       <button
-        className={`bg-black-300 h-72 w-72 flex justify-center items-center hover:bg-orange-600 ${
-          isSidebarOpen ? "closed" : ""
-        }`}
+        className={`bg-black-300 h-72 w-72 flex justify-center items-center hover:bg-orange-600 ${isSidebarOpen ? "closed" : ""
+          }`}
         onClick={toggleSidebar}
       >
         <Image

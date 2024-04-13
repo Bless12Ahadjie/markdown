@@ -26,15 +26,15 @@ class DocumentStore {
 
     this.documents = data;
     this.currentDocumentId = 2;
-   this.loadDocumentsFromStorage();
+    this.loadDocumentsFromStorage();
   }
 
-
+  //really need to look for how to explai this better
   loadDocumentsFromStorage = () => {
-    if (typeof window === 'undefined') return
+    if (typeof window === "undefined") return;
 
     const storedDocuments = window.localStorage.getItem("documents");
-    
+
     if (storedDocuments) {
       this.documents = JSON.parse(storedDocuments);
     } else {
@@ -46,31 +46,44 @@ class DocumentStore {
 
     if (storedCurrentDocumentId) {
       this.currentDocumentId = parseInt(storedCurrentDocumentId);
-      this.documentContent = this.documents.find((doc) => doc.id === this.currentDocumentId)?.content || "";
+      this.documentContent =
+        this.documents.find((doc) => doc.id === this.currentDocumentId)
+          ?.content || "";
     } else {
-      this.currentDocumentId = this.documents.length > 0 ? this.documents[0].id : null;
-      this.documentContent = this.documents.find((doc) => doc.id === this.currentDocumentId)?.content || "";
+      this.currentDocumentId =
+        this.documents.length > 0 ? this.documents[0].id : null;
+      this.documentContent =
+        this.documents.find((doc) => doc.id === this.currentDocumentId)
+          ?.content || "";
     }
   };
 
   saveDocumentsToStorage = () => {
     localStorage.setItem("documents", JSON.stringify(this.documents));
-    localStorage.setItem("currentDocumentId", this.currentDocumentId?.toString() || "");
+    localStorage.setItem(
+      "currentDocumentId",
+      this.currentDocumentId?.toString() || ""
+    );
   };
 
   get getCurrentDocumentName() {
-    const document = this.documents.find((doc) => doc.id === this.currentDocumentId);
+    const document = this.documents.find(
+      (doc) => doc.id === this.currentDocumentId
+    );
     return document?.name ?? " ";
   }
 
   get getCurrentId() {
-    const document = this.documents.find((doc) => doc.id === this.currentDocumentId);
+    const document = this.documents.find(
+      (doc) => doc.id === this.currentDocumentId
+    );
     return document?.id ?? "";
   }
 
   setCurrentDocumentId(docId: number) {
     this.currentDocumentId = docId;
-    this.documentContent = this.documents.find((doc) => doc.id === docId)?.content || "";
+    this.documentContent =
+      this.documents.find((doc) => doc.id === docId)?.content || "";
     this.saveDocumentsToStorage();
   }
 
@@ -112,7 +125,9 @@ class DocumentStore {
   };
 
   updateDocumentName = (newName: string) => {
-    const document = this.documents.find((doc) => doc.id === this.currentDocumentId);
+    const document = this.documents.find(
+      (doc) => doc.id === this.currentDocumentId
+    );
     if (document) {
       document.name = newName;
       this.saveDocumentsToStorage();
@@ -120,20 +135,27 @@ class DocumentStore {
   };
 
   deleteDocument = (id?: number | null) => {
-  
     if (this.currentDocumentId === 2) {
       return;
     }
 
-    this.documents = this.documents.filter((doc) => doc.id !== this.currentDocumentId);
-    const index = this.documents.findIndex((doc) => doc.id === this.currentDocumentId);
+    this.documents = this.documents.filter(
+      (doc) => doc.id !== this.currentDocumentId
+    );
+    const index = this.documents.findIndex(
+      (doc) => doc.id === this.currentDocumentId
+    );
     this.currentDocumentId = this.documents[index + 1]?.id || null;
-    this.documentContent = this.documents.find((doc) => doc.id === this.currentDocumentId)?.content || "";
+    this.documentContent =
+      this.documents.find((doc) => doc.id === this.currentDocumentId)
+        ?.content || "";
     this.saveDocumentsToStorage();
   };
 
   saveCurrentDocument = () => {
-    const currentDocument = this.documents.find((doc) => doc.id === this.currentDocumentId);
+    const currentDocument = this.documents.find(
+      (doc) => doc.id === this.currentDocumentId
+    );
     if (currentDocument) {
       const blob = new Blob([currentDocument.content], {
         type: "text/plain",
@@ -154,9 +176,11 @@ class DocumentStore {
       this.saveDocumentsToStorage();
     }
   };
-  
+
   updateDocumentContent = (content: string) => {
-    const document: Document | undefined = this.documents.find((doc) => doc.id === this.currentDocumentId);
+    const document: Document | undefined = this.documents.find(
+      (doc) => doc.id === this.currentDocumentId
+    );
     if (document) {
       document.content = content;
       this.documentContent = content;
