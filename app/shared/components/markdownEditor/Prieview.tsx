@@ -70,8 +70,8 @@ const Preview = observer(() => {
                 p: (props) => <p className="text-black-100 font-mono   text-xsm dark:text-gray-200 mb-[24px]">{props.children}</p>,
                 br: () => <br className="h-[104px]" />,
                 blockquote: (props) => (
-                  <div className="border-l-4 rounded-l-sm text-orange-600 border-orange-600 bg-gray-200 dark:bg-black-400 px-4 py-2 mb-[24px]">
-                    <span className="text-black-600 font-mono  ml-3 font-bold dark:text-white ">{props.children}</span>
+                  <div className="border-l-4 rounded-l-sm  border-orange-600 bg-gray-200 dark:bg-black-400 px-4 py-2 mb-[24px] pt-10">
+                    <h6 className="text-black-600 font-mono  ml-3 font-bold dark:text-white ">{props.children}</h6 >
                   </div>
                 ),
                 ol: (props) => (
