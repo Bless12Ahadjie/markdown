@@ -51,11 +51,13 @@ class Store {
 
   toggleDarkMode = () => {
     this.isDarkMode = !this.isDarkMode;
-    localStorage.setItem("isDarkMode", this.isDarkMode ? "dark" : "light");
-    document
-      .getElementsByTagName("body")[0]
-      .classList.toggle("dark", this.isDarkMode);
+   this.applyDarkMode() 
+   ;
   };
+  private applyDarkMode() {
+    localStorage.setItem('isDarkMode', this.isDarkMode? 'dark' : 'light');
+    document.body.classList.toggle('dark', this.isDarkMode);
+  }
 
  
 }

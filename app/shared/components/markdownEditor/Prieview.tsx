@@ -20,7 +20,7 @@ const Preview = observer(() => {
 
  return (
    <section
-     className={`flex h-[calc(100vh-65px)] flex-col absolute mt-[70px] border-l pb-4 dark:border-black-100 ${previewSelected ? `${isSidebarOpen ? "right-[-340px]" : "right-[0px]"} border-none w-full left-0 md:left-[320px]` : 'border-gray-500 w-1/2 hidden md:block ml-0 md:ml-[440px] lg:ml-[640px]'}`}
+     className={`flex h-[calc(100vh-65px)] flex-col absolute mt-[70px] border-l pb-4 dark:border-black-100 ${previewSelected ? `${isSidebarOpen ? "right-[-340px] md:ml-[8%] 2xl:ml-[10%]" : "right-[0px]"} border-none w-full left-0 md:left-[320px] 2xl:left-[20%]` : 'border-gray-500 w-1/2 hidden md:block ml-0 md:ml-[440px] lg:ml-[640px] 2xl:ml-[50%]'}`}
    >
      <div
        className={`fixed z-0 h-10 flex items-center justify-between bg-gray-200 px-4 py-3 dark:bg-black-500 ${previewSelected ? `${isSidebarOpen ? "right-[-250px]" : "right-[0px]"} w-full` : "w-1/2"}`}
