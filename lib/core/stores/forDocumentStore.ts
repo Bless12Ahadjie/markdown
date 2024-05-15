@@ -50,14 +50,14 @@ class DocumentStore {
       this.currentDocumentId = parseInt(storedCurrentDocumentId);
       this.documentContent =
         this.documents.find((doc) => doc.id === this.currentDocumentId)
-          ?.content || "";
+          ?.content ?? "";
     } else {
       // assign id to current document id if it has at least 1  element
       this.currentDocumentId =
         this.documents.length > 0 ? this.documents[0].id : null;
       this.documentContent =
         this.documents.find((doc) => doc.id === this.currentDocumentId)
-          ?.content || "";
+          ?.content ?? "";
     }
   };
 
@@ -68,7 +68,7 @@ class DocumentStore {
     localStorage.setItem("documents", JSON.stringify(this.documents));
     localStorage.setItem(
       "currentDocumentId",
-      this.currentDocumentId?.toString() || ""
+      this.currentDocumentId?.toString() ?? ""
     );
   };
 
@@ -98,7 +98,7 @@ class DocumentStore {
   setCurrentDocumentId(docId: number) {
     this.currentDocumentId = docId;
     this.documentContent =
-      this.documents.find((doc) => doc.id === docId)?.content || "";
+      this.documents.find((doc) => doc.id === docId)?.content ?? "";
     this.saveDocumentsToStorage();
   }
 
@@ -181,7 +181,7 @@ class DocumentStore {
     // Update the document content based on the new current document ID
     this.documentContent =
         this.documents.find((doc) => doc.id === this.currentDocumentId)
-            ?.content || "";
+            ?.content ?? "";
 
     this.saveDocumentsToStorage();
   };
