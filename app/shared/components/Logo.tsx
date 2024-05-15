@@ -7,7 +7,7 @@ const Logo = () =>{
     const{isSidebarOpen} = store
     return(
         <Image
-        className={ `${isSidebarOpen ? 'md:hidden' : 'md:block'} hidden sm:block`}
+        className={ `${isSidebarOpen ? 'md:hidden sm:block 2xl:block xl:block' : 'hidden sm:block md:block 2xl:block xl:block'}  `}
         src= {'./MARKDOWN.svg'} 
         alt="logo"
         width={130}

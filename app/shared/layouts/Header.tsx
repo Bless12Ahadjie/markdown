@@ -25,7 +25,7 @@ const Header = observer(() => {
           <div className="flex justify-start items-center gap-6">
             <Logo  ></Logo>
 
-            <div className={`${isSidebarOpen ? 'md:hidden' : 'md:block'} hidden  h-12 w-0.1 bg-black-200`}></div>
+            <div className={`${isSidebarOpen ? 'md:hidden sm:block 2xl:block xl:block' : 'hidden sm:block md:block 2xl:block xl:block'}   h-12 w-0.1 bg-black-200`}></div>
             <DocumentName></DocumentName>
           </div>
         </div>
