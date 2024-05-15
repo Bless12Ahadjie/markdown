@@ -22,8 +22,6 @@ const MarkdownView = observer(() => {
 
 
 
-
-
   return (
     <main
       className={`h-[calc(100vh-65px)]  ${

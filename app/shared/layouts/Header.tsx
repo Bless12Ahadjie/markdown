@@ -17,8 +17,8 @@ const Header = observer(() => {
         isSidebarOpen ? "right-[-250px]" : "right-[0px]"
       }`}
     >
-      <div className="flex h-72 bg-black-400 justify-between pr-6 items-center cursor">
-        <div className="flex gap-25">
+      <div className={`flex h-72 bg-black-400 justify-between items-center cursor ${isSidebarOpen ? 'pr-[274px]': 'pr-6'}`}>
+        <div className={`flex gap-25`}>
           <Toggle></Toggle>
 
           <div className="flex justify-start items-center gap-6">
@@ -29,7 +29,7 @@ const Header = observer(() => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-6 ">
+        <div className={`flex justify-center items-center gap-6 `}>
           <DeleteBtn></DeleteBtn>
           <Button
             className={"hidden md:block text-white text-[15px] md:text:xsm"}

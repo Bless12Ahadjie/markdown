@@ -1,6 +1,6 @@
 "use client";
 
-import MarkdownBody from "./MarkdownBody";
+import MarkdownBody from "../layouts/MarkdownBody";
 import Header from "../layouts/Header";
 import Sidenav from "../layouts/Sidenav";
 

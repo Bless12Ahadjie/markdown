@@ -15,7 +15,7 @@ const Sidenav = observer(() => {
   };
 
   const handleAddDocument = () => {
-    const newDocumentId = documentStore.addDocument();
+    documentStore.addDocument();
     toast.success("New document created succesfully!");
   };
 

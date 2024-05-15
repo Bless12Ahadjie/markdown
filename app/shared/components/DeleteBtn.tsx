@@ -27,7 +27,7 @@ const DeleteBtn = observer(() => {
         toast.error("The document 'welcome.md' cannot be deleted.");
         setIsModalOpen(false);
       } else {
-        deleteDocument(currentDocumentId);
+        deleteDocument();
         toast.success(`"${currentDocument.name}"  was deleted successfully!`);
         setIsModalOpen(false);
       }
@@ -40,6 +40,7 @@ const DeleteBtn = observer(() => {
 
   return (
     <main>
+
       <button
         className=""
         onClick={handleDeleteDocument}

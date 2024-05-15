@@ -8,6 +8,7 @@ import { observer } from "mobx-react";
 import store from "@/lib/core/stores/sidenavStore";
 import { Roboto_Slab } from "next/font/google";
 
+//importing font
 const roboSlab = Roboto_Slab({
  weight: ['400', '700'], 
  subsets: ['latin'],
@@ -42,6 +43,7 @@ const Preview = observer(() => {
        .map((doc) => (
          <Markdown
            className={`mt-6 overflow-y-auto p-6 dark:bg-black-600 dark:text-white h-[calc(100vh-100px)] ${previewSelected ? 'overflow-y-auto w-full md:w-1/2' : 'w-full'}`}
+           // markdown component styling
            components={{
              h1: (props) => <h1 className={`${roboSlab.className} text-xxl font-bold text-black-600 dark:text-white mb-[24px]`}>{props.children}</h1>,
              h2: (props) => <h2 className="text-xl font-thin text-black-300 dark:text-white mb-[24px]">{props.children}</h2>,
@@ -74,39 +76,43 @@ const Preview = observer(() => {
                  {props.children}
                </a>
              ),
-             code: (props) => {
-              const { node, className, children, ...rest } = props;
-              if (typeof children === 'string') {
-                const trimmedContent = children.trim();
-                if (trimmedContent.startsWith('`') && trimmedContent.endsWith('`')) {
-                  const codeContent = trimmedContent
-                  if (codeContent.startsWith('`') && codeContent.endsWith('`')) {
-                    return (
-                      <code className={`${className} font-mono text-black-600 dark:text-white`} {...rest}>
-                        {codeContent.slice(1, -1)}
-                      </code>
-                    );
-                  }
-                  return (
-                    <code className={`${className} font-mono text-black-600 dark:text-white`} {...rest}>
-                      {codeContent}
-                    </code>
-                  );
-                }
-              }
-            
-              return (
-                <div className={`${className} bg-gray-200 py-[20px] px-[40px] rounded-[5px] dark:bg-black-400`}>
-                  <code className={`${className} font-mono text-black-600 dark:text-white`} {...rest}>
-                    {children}
-                  </code>
-                </div>
-              );
-            }
+               code: (props) => {
+                   const { node, className, children, ...rest } = props;
+                   if (typeof children === 'string') {
+                       const trimmedContent = children.trim();
+                       if (trimmedContent.startsWith('`') && trimmedContent.endsWith('`') && trimmedContent.length > 2) {
+                           // Inline code
+                           return (
+                               <code className={`${className} font-mono text-green-600`} {...rest}>
+                                   {trimmedContent.slice(1, -1)}
+                               </code>
+                           );
+                       } else if (trimmedContent.startsWith('```') && trimmedContent.endsWith('```')) {
+                           // Code block
+                           const codeContent = trimmedContent.slice(3, -3); // Extract code content without ```
+                           return (
+                               <div
+                                   className={`${className} bg-gray-200 py-[20px] px-[40px] rounded-[5px] dark:bg-black-400`}>
+                                   <code className={`${className} font-mono text-black-600 dark:text-white`} {...rest}>
+                                       {children}
+                                   </code>
+                               </div>
+                           );
+                       }
+                   }
+
+                   return (
+                       <div className={`${className} bg-gray-200 py-[20px] px-[40px] rounded-[5px] dark:bg-black-400`}>
+                           <code className={`${className} font-mono text-black-600 dark:text-white`} {...rest}>
+                               {children}
+                           </code>
+                       </div>
+                   );
+               }
            }}
            key={doc.id}
          >
-           {doc.content}
+             {doc.content}
          </Markdown>
        ))}
    </section>
