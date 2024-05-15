@@ -31,5 +31,5 @@ const Button = ({ name, style, className }: btns) => {
     </main>
   );
 };
-
+Button.displayName = "Button";
 export default Button;
