@@ -60,7 +60,7 @@ const DeleteBtn = observer(() => {
       </button>
 
       {isModalOpen && currentDocument && (
-        <div
+        <button
           className="bg-modalOverlayDark fixed left-0 top-0 z-50 h-screen w-screen dark:bg-modalOverlay"
           onClick={() => setIsModalOpen(false)}
         >
@@ -81,7 +81,7 @@ const DeleteBtn = observer(() => {
               </span>
             </button>
           </div>
-        </div>
+        </button>
       )}
     </main>
   );

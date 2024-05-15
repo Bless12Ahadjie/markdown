@@ -19,12 +19,13 @@ const Header = observer(() => {
     >
       <div className={`flex h-72 bg-black-400 justify-between items-center cursor ${isSidebarOpen ? 'pr-[274px]': 'pr-6'}`}>
         <div className={`flex gap-25`}>
+
           <Toggle></Toggle>
 
           <div className="flex justify-start items-center gap-6">
-            <Logo></Logo>
+            <Logo  ></Logo>
 
-            <div className="hidden md:block h-12 w-0.1 bg-black-200"></div>
+            <div className={`${isSidebarOpen ? 'md:hidden' : 'md:block'} hidden  h-12 w-0.1 bg-black-200`}></div>
             <DocumentName></DocumentName>
           </div>
         </div>

@@ -1,14 +1,13 @@
 "use client";
 import documentStore from "@/lib/core/stores/forDocumentStore";
-import { btns } from "@/lib/core/type/Types";
-import { toast } from "react-toastify";
+import {btns} from "@/lib/core/type/Types";
 
 const Button = ({ name, style, className }: btns) => {
   const { currentDocumentId, documents, saveCurrentDocument } = documentStore;
 
   const handleSaveDocument = () => {
     saveCurrentDocument();
-    const currentDocument = documents.find(
+   documents.find(
       (doc) => doc.id === currentDocumentId
     );
   };
