@@ -28,8 +28,8 @@ const MarkdownView = observer(() => {
         previewSelected ? "hidden " : "w-full md:w-1/2 lg:w-1/2"
       } relative mt-[70px] ${
         isSidebarOpen
-          ? "w-[640px] md:w-[640px] lg:w-[642px] 2xl:w-[962px]"
-          : "w-full md:w-1/2 lg:w-1/2"
+          ? "w-[640px] md:w-[442px] lg:w-[642px] 2xl:w-[962px]"
+          : "w-full md:w-[442px]  lg:w-1/2"
       }`}
     >
       <div className="flex h-10 items-center justify-between  px-4 my-auto pl-4  bg-gray-200 dark:bg-black-500">

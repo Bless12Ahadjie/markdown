@@ -10,13 +10,9 @@ import store from "@/lib/core/stores/sidenavStore";
 import documentStore from "@/lib/core/stores/forDocumentStore";
 
 const Sidenav = observer(() => {
-  const toggleSidebar = () => {
-    store.toggleSidebar();
-  };
-
   const handleAddDocument = () => {
     documentStore.addDocument();
-    toast.success("New document created succesfully!");
+    toast.success("New document created successfully!");
   };
 
   return (
